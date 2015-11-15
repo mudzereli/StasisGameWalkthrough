@@ -1,0 +1,1806 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  width: 45em;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 30px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>readme</title></head><body><article class="markdown-body"><h1 id="stasis-walkthrough"><a name="user-content-stasis-walkthrough" href="#stasis-walkthrough" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>STASIS WALKTHROUGH</h1>
+<p>Without a family, man, alone in the world, trembles with the cold.</p>
+<h5 id="what-is-this"><a name="user-content-what-is-this" href="#what-is-this" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>What is this?</h5>
+<ul>
+<li>This is a step-by-step walkthrough for the game STASIS.</li>
+</ul>
+<hr />
+<h4 id="index"><a name="user-content-index" href="#index" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>INDEX</h4>
+<ul>
+<li><a href="#chapter-1-healing-up">Chapter 1: Healing Up</a></li>
+<li><a href="#chapter-2-getting-off-the-floor">Chapter 2: Getting Off the Floor</a></li>
+<li><a href="#chapter-3-fixing-the-tram">Chapter 3: Fixing the Tram</a></li>
+<li><a href="#chapter-4-crash-landing">Chapter 4: Crash Landing</a></li>
+<li><a href="#chapter-5-crew-quarters">Chapter 5: Crew Quarters</a></li>
+<li><a href="#chapter-6-sewers">Chapter 6: Sewers</a></li>
+<li><a href="#chapter-7-return-to-the-crew-quarters">Chapter 7: Return to Crew Quarters</a></li>
+<li><a href="#chapter-8-the-medical-bay">Chapter 8: The Medical Bay</a></li>
+<li><a href="#chapter-9-botany-lab">Chapter 9: The Botany Lab</a></li>
+<li><a href="#chapter-10-power-lab">Chapter 10: The Power Lab</a></li>
+<li><a href="#chapter-11-malans-private-lab">Chapter 11: Malan&rsquo;s Private Lab</a></li>
+<li><a href="#chapter-12-visitors-center">Chapter 12: Visitor&rsquo;s Center</a></li>
+</ul>
+<hr />
+<h4 id="chapter-1-healing-up"><a name="user-content-chapter-1-healing-up" href="#chapter-1-healing-up" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 1: HEALING UP</h4>
+<h6 id="starting-room"><a name="user-content-starting-room" href="#starting-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Starting Room</h6>
+<ol>
+<li><strong>MOVE</strong> towards the <strong>TOP LEFT</strong> red <strong>LOCKED DOOR</strong> to start a dialog that unlocks the door</li>
+<li><strong>EXIT</strong> using the newly unlocked door</li>
+</ol>
+<h6 id="spinning-fan-corridor"><a name="user-content-spinning-fan-corridor" href="#spinning-fan-corridor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Spinning Fan Corridor</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="product-storage-lab"><a name="user-content-product-storage-lab" href="#product-storage-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Product Storage Lab</h6>
+<ol>
+<li><strong>EXIT</strong> using the <strong>TOP RIGHT</strong> blue door</li>
+</ol>
+<h6 id="medical-supply-room"><a name="user-content-medical-supply-room" href="#medical-supply-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Supply Room</h6>
+<ol>
+<li><strong>EXIT</strong> using the <strong>RIGHT</strong> doorway</li>
+</ol>
+<h6 id="infirmary"><a name="user-content-infirmary" href="#infirmary" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Infirmary</h6>
+<ol>
+<li><strong>CLICK</strong> on the <strong>BREAKER BOX</strong> by the door<ol>
+<li><strong>PRESS BUTTON #4</strong> to turn on the power</li>
+<li><strong>PRESS BUTTON #1</strong> to turn on the doc-mate scanner</li>
+<li><strong>EXIT</strong> the <strong>BREAKER BOX</strong> screen</li>
+</ol>
+</li>
+<li><strong>ENTER</strong> the <strong>DOCMATE SCANNER</strong> that opens on the <strong>RIGHT</strong> side of the room</li>
+<li><strong>CLICK</strong> the <strong>EMERGENCY MEDICAL KIT DRAWER</strong> that opens after the cutscene to obtain <strong>EMPTY HYPODERMIC SYRINGE</strong> and <strong>DOCMATE SYSTEMS MIXTURE</strong></li>
+<li><strong>USE</strong> the <strong>EMPTY HYPODERMIC SYRINGE</strong> on <strong>DOCMATE SYSTEMS MIXTURE</strong> to get <strong>FULL HYPODERMIC SYRINGE</strong></li>
+<li><strong>USE</strong> <strong>FULL HYPODERMIC SYRINGE</strong> on yourself to heal up &amp; start a cutscene</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-2-getting-off-the-floor">-&gt; Chapter 2: Getting Off the Floor</a></sup></sub></p>
+<hr />
+<h4 id="chapter-2-getting-off-the-floor"><a name="user-content-chapter-2-getting-off-the-floor" href="#chapter-2-getting-off-the-floor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 2: GETTING OFF THE FLOOR</h4>
+<h6 id="infirmary_1"><a name="user-content-infirmary_1" href="#infirmary_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Infirmary</h6>
+<ol>
+<li><strong>CLICK</strong> on the <strong>BREAKER BOX</strong> again<ol>
+<li><strong>PRESS BUTTON #4</strong> to turn on the power</li>
+<li><strong>PRESS BUTTON #3</strong> to turn on the robotic surgeon</li>
+<li><strong>EXIT</strong> the <strong>BREAKER BOX</strong> screen</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the <strong>ROBOTIC SURGEON TERMINAL</strong> in the <strong>BOTTOM RIGHT</strong> corner of the room<ol>
+<li>-&gt; ACCESS SURGERY PREP</li>
+<li>-&gt; Organ Extraction</li>
+<li>the <strong>ROBOTIC SURGEON TERMINAL</strong> will close and the <strong>ROBOTIC SURGEON ARM</strong> will extend</li>
+</ol>
+</li>
+<li>run back and <strong>CLICK</strong> on the <strong>BREAKER BOX</strong> again<ol>
+<li><strong>PRESS BUTTON #2</strong> to overload the power which turns off all the lights</li>
+<li><strong>EXIT</strong> the <strong>BREAKER BOX</strong> screen</li>
+</ol>
+</li>
+<li>run back and <strong>CLICK</strong> the extended <strong>ROBOTIC SURGEON ARM</strong> to get the <strong>HIGH SPEED NEURAL DRILL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Product Storage Lab</strong> (room with oval desk &amp; blood smear)</li>
+</ol>
+<h6 id="product-storage-lab_1"><a name="user-content-product-storage-lab_1" href="#product-storage-lab_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Product Storage Lab</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="maintenance-corridor"><a name="user-content-maintenance-corridor" href="#maintenance-corridor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Maintenance Corridor</h6>
+<ol>
+<li><strong>EXIT</strong> the to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="elevator-shaft-corridor"><a name="user-content-elevator-shaft-corridor" href="#elevator-shaft-corridor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elevator Shaft Corridor</h6>
+<ol>
+<li><strong>EXIT</strong> using the blue unlocked door</li>
+</ol>
+<h6 id="lobby"><a name="user-content-lobby" href="#lobby" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Lobby</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>EMERGENCY GLASS BOX</strong> on the <strong>TOP</strong> side of the room</li>
+<li><strong>CLICK</strong> the <strong>GLASS SHARD</strong> pile to obtain <strong>SHARD OF GLASS</strong></li>
+<li><strong>CLICK</strong> the <strong>ADMIN COMPUTER</strong> on the <strong>LEFT</strong> side of the room<ol>
+<li>[PRODUCT STORAGE SECURITY]</li>
+<li>>&gt; MAINTENANCE DOOR - Locked</li>
+<li>&lt;- BACK</li>
+<li>&lt;&lt;&lt; EXIT &lt;&lt;&lt;</li>
+</ol>
+</li>
+<li><strong>EXIT</strong> into the restrooms near the <strong>TOP RIGHT</strong> of the room</li>
+</ol>
+<h6 id="restrooms"><a name="user-content-restrooms" href="#restrooms" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Restrooms</h6>
+<ol>
+<li><strong>CLICK</strong> the first <strong>TOILET</strong> from the left to get <strong>WET DIRTY TOWEL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Elevator Shaft Corridor</strong> (with the broken loader)</li>
+</ol>
+<h6 id="elevator-shaft-corridor_1"><a name="user-content-elevator-shaft-corridor_1" href="#elevator-shaft-corridor_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elevator Shaft Corridor</h6>
+<ol>
+<li><strong>EXIT</strong> using the newly unlocked door near the <strong>TOP</strong> of the room (2nd from left)</li>
+</ol>
+<h6 id="maintenance-walkway"><a name="user-content-maintenance-walkway" href="#maintenance-walkway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Maintenance Walkway</h6>
+<ol>
+<li><strong>CLICK</strong> the red <strong>PRESSURE RELEASE VALVE</strong> near the <strong>TOP</strong> of the room multiple times until it can&rsquo;t be clicked any more</li>
+<li><strong>EXIT</strong> using the door on the <strong>LEFT</strong> side of the room up the walkway</li>
+</ol>
+<h6 id="fluid-tank-room"><a name="user-content-fluid-tank-room" href="#fluid-tank-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Fluid Tank Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>HIGH SPEED NEURAL DRILL</strong> on the <strong>FLUID TANKS</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Elevator Shaft Corridor</strong> (with the broken loader)</li>
+</ol>
+<h6 id="elevator-shaft-corridor_2"><a name="user-content-elevator-shaft-corridor_2" href="#elevator-shaft-corridor_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elevator Shaft Corridor</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>FREIGHT ELEVATOR DOOR</strong></li>
+<li><strong>CLICK</strong> the <strong>ELEVATOR CONTROL</strong><ol>
+<li><strong>PRESS</strong> the <strong>Serv. Lobby 2</strong> button to go down</li>
+</ol>
+</li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong> &amp; some dialog will start</li>
+</ol>
+<h6 id="dead-body-corridor"><a name="user-content-dead-body-corridor" href="#dead-body-corridor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dead Body Corridor</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>DEAD BODY</strong> to start a dialog that opens the nearby door</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-3-fixing-the-tram">-&gt; Chapter 3: Fixing the Tram</a></sup></sub></p>
+<hr />
+<h4 id="chapter-3-fixing-the-tram"><a name="user-content-chapter-3-fixing-the-tram" href="#chapter-3-fixing-the-tram" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 3: FIXING THE TRAM</h4>
+<h6 id="dead-body-corridor_1"><a name="user-content-dead-body-corridor_1" href="#dead-body-corridor_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dead Body Corridor</h6>
+<ol>
+<li><strong>USE</strong> the <strong>SHARD OF GLASS</strong> on the <strong>DEAD BODY</strong> to get <strong>SEVERED HAND</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Service Corridor Elevator</strong> that you entered from</li>
+</ol>
+<h6 id="service-corridor-elevator"><a name="user-content-service-corridor-elevator" href="#service-corridor-elevator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Service Corridor Elevator</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>ELEVATOR CONTROL</strong></li>
+<li><strong>PRESS</strong> the <strong>Serv. Lobby 1</strong> button to go up</li>
+</ol>
+<h5 id="serv-lobby-1"><a name="user-content-serv-lobby-1" href="#serv-lobby-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>SERV. LOBBY 1</h5>
+<h6 id="window-corridor-shaft"><a name="user-content-window-corridor-shaft" href="#window-corridor-shaft" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Window Corridor Shaft</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP RIGHT</strong></li>
+</ol>
+<h6 id="body-bag-corridor"><a name="user-content-body-bag-corridor" href="#body-bag-corridor" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Body Bag Corridor</h6>
+<ol>
+<li><strong>CLICK</strong> the far right <strong>CLOSED BODY BAG</strong> to reveal an <strong>OPENED BODY BAG</strong> with a shining item</li>
+<li><strong>CLICK</strong> the newly <strong>OPENED BODY BAG</strong> to obtain <strong>ELECTRONIC TOE TAG</strong></li>
+<li><strong>USE</strong> the <strong>SEVERED HAND</strong> on the <strong>BIOMETRIC TERMINAL</strong> near the <strong>TOP</strong> of the room</li>
+<li><strong>EXIT</strong> through the newly opened door</li>
+</ol>
+<h6 id="morgue"><a name="user-content-morgue" href="#morgue" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Morgue</h6>
+<ol>
+<li><strong>USE</strong> the <strong>WET DIRTY TOWEL</strong> on the <strong>FURNACE</strong></li>
+<li><strong>USE</strong> the <strong>ELECTRONIC TOE TAG</strong> on the <strong>FURNACE</strong> and <strong>GO BACK</strong> to the <strong>Body Bag Corridor</strong> FAST</li>
+</ol>
+<h6 id="body-bag-corridor_1"><a name="user-content-body-bag-corridor_1" href="#body-bag-corridor_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Body Bag Corridor</h6>
+<ol>
+<li><strong>GO BACK</strong> to the <strong>Morgue</strong> which will now be thawed</li>
+</ol>
+<h6 id="morgue_1"><a name="user-content-morgue_1" href="#morgue_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Morgue</h6>
+<ol>
+<li><strong>CLICK</strong> the far right <strong>CADAVER</strong> with the <strong>CROW BAR</strong> in its head to obtain the <strong>CROW BAR</strong></li>
+<li><strong>GO BACK</strong> down the <strong>ELEVATOR</strong> to the <strong>Dead Body Corridor</strong> on <strong>Serv. Lobby 2</strong> where you got the <strong>SEVERED HAND</strong></li>
+</ol>
+<h6 id="dead-body-corridor_2"><a name="user-content-dead-body-corridor_2" href="#dead-body-corridor_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dead Body Corridor</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>TOP</strong> door marked RAPID TRANSPORT SYSTEM</li>
+<li><strong>MOVE</strong> forward until a dialog starts</li>
+<li><strong>EXIT</strong> to the <strong>TOP RIGHT</strong></li>
+</ol>
+<h6 id="tram-station"><a name="user-content-tram-station" href="#tram-station" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tram Station</h6>
+<ol>
+<li><strong>USE</strong> the <strong>CROW BAR</strong> on the left <strong>CLOSED BREAKER BOX</strong> on the <strong>TOP</strong> wall by the <strong>COMPUTER TERMINAL</strong></li>
+<li><strong>CLICK</strong> the <strong>OPEN BREAKER BOX</strong></li>
+<li><strong>CLICK</strong> the blue fuse to obtain <strong>FUSE</strong></li>
+<li><strong>USE</strong> the <strong>CROW BAR</strong> on the right <strong>CLOSED BREAKER BOX</strong> on the <strong>TOP</strong> wall by the <strong>COMPUTER TERMINAL</strong></li>
+<li><strong>USE</strong> the <strong>FUSE</strong> on the right <strong>OPEN BREAKER BOX</strong></li>
+<li><strong>CLICK</strong> the <strong>COMPUTER TERMINAL</strong><ol>
+<li>-&gt; RECHARGE TRAM</li>
+<li>a cutscene will play</li>
+<li>[EXIT]</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the right <strong>OPEN BREAKER BOX</strong></li>
+<li><strong>CLICK</strong> the blue fuse to obtain <strong>FUSE</strong> again</li>
+<li><strong>USE</strong> the <strong>FUSE</strong> on the left <strong>OPEN BREAKER BOX</strong></li>
+<li><strong>CLICK</strong> the <strong>COMPUTER TERMINAL</strong><ol>
+<li>-&gt; SWITCH TRAM LINE</li>
+<li>a dialog will occur</li>
+<li>[EXIT]</li>
+</ol>
+</li>
+<li><strong>EXIT</strong> into the tram near the <strong>BOTTOM MIDDLE</strong></li>
+</ol>
+<h6 id="the-tram"><a name="user-content-the-tram" href="#the-tram" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>The Tram</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>TRAM CONTROLS</strong> near the <strong>BOTTOM RIGHT</strong> at the front of the tram car<ol>
+<li><strong>PRESS</strong> the green <strong>TRAM LINE SWITCH</strong> button</li>
+<li>wait for the dialog and cutscenes to finish and you will be in the next area</li>
+</ol>
+</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-4-crash-landing">-&gt; Chapter 4: Crash Landing</a></sup></sub></p>
+<hr />
+<h4 id="chapter-4-crash-landing"><a name="user-content-chapter-4-crash-landing" href="#chapter-4-crash-landing" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 4: CRASH LANDING</h4>
+<h6 id="crashed-tram-room"><a name="user-content-crashed-tram-room" href="#crashed-tram-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crashed Tram Room</h6>
+<ol>
+<li><strong>CLICK</strong> on the tram right below your character to start hanging from the tram</li>
+<li><strong>CLICK</strong> the ground below your character to jump down</li>
+<li><strong>CLICK</strong> the <strong>NYLON EMERGENCY TAPE</strong> near the <strong>TOP</strong> door</li>
+<li><strong>CLICK</strong> on the warning tape near the door to tear it down</li>
+<li><strong>EXIT</strong> through the door you ripped the tape from</li>
+</ol>
+<h6 id="maintenance-room"><a name="user-content-maintenance-room" href="#maintenance-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Maintenance Room</h6>
+<ol>
+<li><strong>EXIT</strong> through the blue unlocked door</li>
+</ol>
+<h6 id="slime-pool"><a name="user-content-slime-pool" href="#slime-pool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slime Pool</h6>
+<ol>
+<li><strong>USE</strong> the <strong>HIGH SPEED NEURAL DRILL</strong> on the <strong>ELECTRICITY POLE</strong></li>
+<li><strong>USE</strong> the <strong>CROW BAR</strong> on the <strong>ELECTRICITY POLE</strong> </li>
+<li><strong>USE</strong> the <strong>NYLON EMERGENCY TAPE</strong> on the <strong>CROW BAR</strong> to obtain <strong>CROWBAR GRAPPLING HOOK</strong></li>
+<li><strong>USE</strong> the <strong>CROWBAR GRAPPLING HOOK</strong> on the <strong>DEAD BODY</strong></li>
+<li><strong>CLICK</strong> The <strong>DEAD BODY</strong> to obtain <strong>TOOLBOX KEYS</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Maintenance Room</strong></li>
+</ol>
+<h6 id="maintenance-room_1"><a name="user-content-maintenance-room_1" href="#maintenance-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Maintenance Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>TOOLBOX KEYS</strong> on the <strong>TOOLBOX</strong></li>
+<li><strong>CLICK</strong> the now opened <strong>TOOLBOX</strong> to obtain <strong>JUMPER CABLE</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Slime Pool</strong></li>
+</ol>
+<h6 id="slime-pool_1"><a name="user-content-slime-pool_1" href="#slime-pool_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Slime Pool</h6>
+<ol>
+<li><strong>USE</strong> the <strong>JUMPER CABLE</strong> on the <strong>GENERATOR</strong></li>
+<li><strong>CLICK</strong> on the <strong>EXPOSED WIRES</strong></li>
+<li><strong>CLICK</strong> the <strong>GENERATOR</strong> to turn it on</li>
+<li>swim through the sludge and <strong>EXIT</strong> through the <strong>TOP LEFT</strong></li>
+</ol>
+<h6 id="vat-room"><a name="user-content-vat-room" href="#vat-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Vat Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>CROWBAR GRAPPLING HOOK</strong> on the <strong>CROSSBEAM</strong> by the <strong>TOP RIGHT</strong> platform</li>
+<li><strong>CLICK</strong> the <strong>NYLON ROPE</strong> that is now hanging to start climbing</li>
+<li><strong>EXIT</strong> through the <strong>TOP</strong> of the room</li>
+</ol>
+<h6 id="broken-down-tram-room-1"><a name="user-content-broken-down-tram-room-1" href="#broken-down-tram-room-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Down Tram Room #1</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>RIGHT</strong> side of the room</li>
+</ol>
+<h6 id="broken-down-tram-room-2"><a name="user-content-broken-down-tram-room-2" href="#broken-down-tram-room-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Down Tram Room #2</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>RIGHT</strong> side of the room</li>
+</ol>
+<h6 id="broken-down-tram-room-3"><a name="user-content-broken-down-tram-room-3" href="#broken-down-tram-room-3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Down Tram Room #3</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>RIGHT</strong> side of the room</li>
+</ol>
+<h6 id="flooded-hydraulic-room"><a name="user-content-flooded-hydraulic-room" href="#flooded-hydraulic-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Flooded Hydraulic Room</h6>
+<ol>
+<li><strong>EXIT</strong> through the hydraulic door that opened during the dialog</li>
+</ol>
+<h6 id="hydraulic-chamber"><a name="user-content-hydraulic-chamber" href="#hydraulic-chamber" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hydraulic Chamber</h6>
+<ol>
+<li><strong>EXIT</strong> through the hydraulic door that opened during the dialog</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-5-crew-quarters">-&gt; Chapter 5: Crew Quarters</a></sup></sub></p>
+<hr />
+<h4 id="chapter-5-crew-quarters"><a name="user-content-chapter-5-crew-quarters" href="#chapter-5-crew-quarters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 5: CREW QUARTERS</h4>
+<h6 id="crew-commons-lobby"><a name="user-content-crew-commons-lobby" href="#crew-commons-lobby" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Commons Lobby</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>TOP RIGHT</strong> door labeled Crew Commons</li>
+</ol>
+<h6 id="crew-commons-hallway"><a name="user-content-crew-commons-hallway" href="#crew-commons-hallway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Commons Hallway</h6>
+<ol>
+<li><strong>EXIT</strong> through the door the <strong>LEFT MIDDLE</strong> of the hallway</li>
+</ol>
+<h6 id="dna-scanner-lab"><a name="user-content-dna-scanner-lab" href="#dna-scanner-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>DNA Scanner Lab</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>DNA SCANNER</strong> to start the event</li>
+<li><strong>USE</strong> the <strong>EMPTY HYPODERMIC SYRINGE</strong> on yourself to get <strong>FULL HYPODERMIC SYRINGE</strong></li>
+<li><strong>USE</strong> the <strong>FULL HYPODERMIC SYRINGE</strong> on the <strong>DNA SCANNER</strong></li>
+<li><strong>CLICK</strong> on the <strong>FROSTED GLASS WINDOW</strong> to start a long cutscene that kicks you out of the room</li>
+</ol>
+<h6 id="crew-commons-hallway_1"><a name="user-content-crew-commons-hallway_1" href="#crew-commons-hallway_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Commons Hallway</h6>
+<ol>
+<li><strong>EXIT</strong> through the now opened <strong>TOP RIGHT</strong> hall</li>
+</ol>
+<h6 id="crew-hub"><a name="user-content-crew-hub" href="#crew-hub" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Hub</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>BOTTOM RIGHT</strong> doorway</li>
+</ol>
+<h6 id="crew-lab-hallway"><a name="user-content-crew-lab-hallway" href="#crew-lab-hallway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Lab Hallway</h6>
+<ol>
+<li><strong>MOVE</strong> down the hall a bit to trigger the lights</li>
+<li><strong>EXIT</strong> through the door near the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="crew-lab-2"><a name="user-content-crew-lab-2" href="#crew-lab-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Lab #2</h6>
+<ol>
+<li><strong>CLICK</strong> on the <strong>BED LOCKER</strong> on the right side of the room to obtain <strong>LINEN BED SHEET</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Crew Lab Hallway</strong></li>
+</ol>
+<h6 id="crew-lab-hallway_1"><a name="user-content-crew-lab-hallway_1" href="#crew-lab-hallway_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Lab Hallway</h6>
+<ol>
+<li><strong>EXIT</strong> through the other door near the <strong>TOP</strong> of the room</li>
+<li><strong>USE</strong> the <strong>LINEN BED SHEET</strong> on the <strong>TORN-UP FLOOR GRATING</strong></li>
+<li><strong>CLICK</strong> the <strong>TORN-UP FLOOR GRATING</strong> to climb down</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-6-sewers">-&gt; Chapter 6: Sewers</a></sup></sub></p>
+<hr />
+<h4 id="chapter-6-sewers"><a name="user-content-chapter-6-sewers" href="#chapter-6-sewers" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 6: SEWERS</h4>
+<h6 id="sewer-drop-room"><a name="user-content-sewer-drop-room" href="#sewer-drop-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sewer Drop Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP LEFT</strong></li>
+</ol>
+<h6 id="sewer-skeleton-room"><a name="user-content-sewer-skeleton-room" href="#sewer-skeleton-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sewer Skeleton Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP LEFT</strong> up the ramp by the skeletons</li>
+</ol>
+<h6 id="dance-hall"><a name="user-content-dance-hall" href="#dance-hall" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Dance Hall</h6>
+<ol>
+<li><strong>USE</strong> the <strong>HIGH SPEED NEURAL DRILL</strong> on the <strong>HOLOGRAPHIC EMITTER</strong> near the <strong>MIDDLE</strong> of the room to obtain <strong>HOLOGRAPHIC EMITTER</strong></li>
+<li><strong>CLICK</strong> on the <strong>POOL TABLE AND POOL CUE</strong> near the <strong>BOTTOM</strong> of the room to obtain <strong>POOL CUE</strong></li>
+<li><strong>USE</strong> the <strong>POOL CUE</strong> on the <strong>CIGARETTE VENDING MACHINE</strong> near the <strong>TOP LEFT</strong> of the room</li>
+<li><strong>CLICK</strong> the <strong>CAYNE CORPORATION LIGHTER</strong> to obtain <strong>CAYNE CORPORATION LIGHTER</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Sewer Drop Room</strong></li>
+</ol>
+<h6 id="sewer-drop-room_1"><a name="user-content-sewer-drop-room_1" href="#sewer-drop-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sewer Drop Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="sewer-drain-room-1"><a name="user-content-sewer-drain-room-1" href="#sewer-drain-room-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sewer Drain Room #1</h6>
+<ol>
+<li><strong>EXIT</strong> near the <strong>TOP</strong> of the room into the <strong>Pipe Access #1</strong></li>
+</ol>
+<h6 id="pipe-access-1"><a name="user-content-pipe-access-1" href="#pipe-access-1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pipe Access #1</h6>
+<ol>
+<li><strong>MOVE</strong> along the pipe a bit to trigger a few quick cutscenes</li>
+<li><strong>EXIT</strong> through the <strong>BOTTOM LEFT</strong> side of the pipe</li>
+</ol>
+<h6 id="pipe-access-2"><a name="user-content-pipe-access-2" href="#pipe-access-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Pipe Access #2</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>BOTTOM LEFT</strong> side of the pipe</li>
+</ol>
+<h6 id="flooded-drain-room"><a name="user-content-flooded-drain-room" href="#flooded-drain-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Flooded Drain Room</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>PUMP STATION TERMINAL</strong><ol>
+<li>adjust the arrows in this order: <strong>DOWN UP UP RIGHT LEFT RIGHT</strong></li>
+<li><strong>CLICK</strong> the bottom button that looks like an emptying drain</li>
+<li><strong>CLICK</strong> the red x button to close the terminal</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the <strong>LADDER</strong> on the <strong>RIGHT</strong> side to climb to the lower part</li>
+<li><strong>USE</strong> the <strong>CAYNE CORPORATION LIGHTER</strong> on the <strong>PIPE GRIP</strong> near the leaking gas</li>
+<li>run back and <strong>CLICK</strong> the <strong>LADDER</strong> again to climb to the upper part</li>
+<li><strong>MOVE</strong> over on the platform near the release valves</li>
+<li><strong>USE</strong> the <strong>POOL CUE</strong> on the <strong>PIPE GRIP HOLDING LIGHTER</strong> to reveal <strong>EXPOSED ELEVATOR SHAFT LADDER</strong></li>
+<li><strong>CLICK</strong> the <strong>LADDER</strong> again to climb to the lower part</li>
+<li><strong>EXIT</strong> through the <strong>EXPOSED ELEVATOR SHAFT LADDER</strong></li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-7-return-to-the-crew-quarters">-&gt; Chapter 7: Return to Crew Quarters</a></sup></sub></p>
+<hr />
+<h4 id="chapter-7-return-to-the-crew-quarters"><a name="user-content-chapter-7-return-to-the-crew-quarters" href="#chapter-7-return-to-the-crew-quarters" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 7: RETURN TO THE CREW QUARTERS</h4>
+<h6 id="crew-hub_1"><a name="user-content-crew-hub_1" href="#crew-hub_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Hub</h6>
+<ol>
+<li><strong>GO BACK</strong> to the <strong>Crew Commons Lobby</strong> with the big hydraulic door</li>
+</ol>
+<h6 id="crew-commons-lobby_1"><a name="user-content-crew-commons-lobby_1" href="#crew-commons-lobby_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Commons Lobby</h6>
+<ol>
+<li><strong>EXIT</strong> using the SECURITY OFFICE door near the <strong>MIDDLE / TOP</strong> of the room</li>
+</ol>
+<h6 id="security-office"><a name="user-content-security-office" href="#security-office" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Security Office</h6>
+<ol>
+<li><strong>USE</strong> the <strong>HOLOGRAPHIC EMITTER</strong> on the <strong>MOTION DETECTOR</strong> above the door on the <strong>TOP RIGHT</strong> of the room</li>
+<li><strong>CLICK</strong> the <strong>COMPUTER TERMINAL</strong> in the <strong>BOTTOM LEFT</strong> of the room<ol>
+<li>[ATMOSPHERE CONTROL ACCESS]</li>
+<li>-&gt; ACTIVE MOTION DETECTOR</li>
+<li>a door will open</li>
+</ol>
+</li>
+<li>go through the opened door and <strong>CLICK</strong> the <strong>ATMOSPHERIC CONTROL ACCESS TERMINAL</strong><ol>
+<li>-&gt; VENTING PROCEDURES</li>
+<li>-&gt; VENT ATMOSPHERE IN TRAM CORRIDOR B</li>
+</ol>
+</li>
+<li><strong>GO BACK</strong> to the <strong>Crew Hub</strong> with the elevator in the middle</li>
+</ol>
+<h6 id="crew-hub_2"><a name="user-content-crew-hub_2" href="#crew-hub_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Crew Hub</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>SECURITY PANEL</strong> by the <strong>TOP RIGHT</strong> door<ol>
+<li>-&gt; DOOR LOCKED DUE TO ATMOSPHERIC CONTROL OVERRIDE</li>
+<li>-&gt; OVERRIDE LOCK AND OPEN DOOR?</li>
+</ol>
+</li>
+<li><strong>EXIT</strong> through the now opened door near the <strong>TOP RIGHT</strong></li>
+</ol>
+<h6 id="tram-station-b-hall"><a name="user-content-tram-station-b-hall" href="#tram-station-b-hall" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tram Station B Hall</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>TOP RIGHT</strong></li>
+</ol>
+<h6 id="specimen-container-room"><a name="user-content-specimen-container-room" href="#specimen-container-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Specimen Container Room</h6>
+<ol>
+<li><strong>CLICK</strong> the far right <strong>SPECIMEN TRANSPORT CONTAINER</strong> near the middle of the room</li>
+<li>remember this sequence or at least 2/3 of it since you have to enter it in the next room</li>
+<li><img alt="Specimen Transport Code" src="https://i.imgur.com/OK2y7Gs.jpg" /></li>
+<li><strong>GO BACK</strong> to the <strong>Tram Station B Hall</strong></li>
+</ol>
+<h6 id="tram-station-b-hall_1"><a name="user-content-tram-station-b-hall_1" href="#tram-station-b-hall_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tram Station B Hall</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>TOP MIDDLE</strong></li>
+<li><strong>CLICK</strong> the <strong>SWITCHBOARD</strong><ol>
+<li>enter the code for the [MEDICAL BAY] that you remembered earlier</li>
+<li>exit the terminal</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the <strong>SPECIMEN TRANSPORT CONTAINER</strong> that opens to travel to the next area</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-8-the-medical-bay">-&gt; Chapter 8: The Medical Bay</a></sup></sub></p>
+<hr />
+<h4 id="chapter-8-the-medical-bay"><a name="user-content-chapter-8-the-medical-bay" href="#chapter-8-the-medical-bay" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 8: THE MEDICAL BAY</h4>
+<h6 id="medical-tram-room"><a name="user-content-medical-tram-room" href="#medical-tram-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Tram Room</h6>
+<ol>
+<li><strong>EXIT</strong> through the <strong>BOTTOM LEFT</strong> door</li>
+</ol>
+<h6 id="medical-bay-lobby"><a name="user-content-medical-bay-lobby" href="#medical-bay-lobby" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Bay Lobby</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>JUKKA COLA VENDING MACHINE</strong> to get a <strong>JUKKA COLA</strong></li>
+<li><strong>CLICK</strong> the <strong>JUKKA COLA VENDING MACHINE</strong> until it falls over and gets shot by the turrets</li>
+<li><strong>CLICK</strong> the <strong>HANGING WIRE</strong> by where the vending machine was to obtain <strong>LOOSE CABLES</strong></li>
+<li><strong>EXIT</strong> using the the <strong>EXPOSED DUCT</strong> by where the <strong>BOTTOM LEFT</strong> turret came out</li>
+</ol>
+<h6 id="sentry-turret-duct"><a name="user-content-sentry-turret-duct" href="#sentry-turret-duct" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Sentry Turret Duct</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>PISTOL</strong> in the <strong>BOTTOM RIGHT</strong> part of the duct to obtain <strong>EMPTY PISTOL</strong></li>
+<li><strong>USE</strong> the <strong>JUKKA COLA</strong> on the <strong>SENTRY GUN COMPUTER CONTROL</strong></li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong> the way you came in</li>
+</ol>
+<h6 id="medical-bay-lobby_1"><a name="user-content-medical-bay-lobby_1" href="#medical-bay-lobby_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Bay Lobby</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>GLASS DOOR</strong> to activate a dialog</li>
+<li><strong>CLICK</strong> the <strong>DISCONNECTED SENTRY GUN</strong> to shoot the glass door</li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="medical-elevator-room"><a name="user-content-medical-elevator-room" href="#medical-elevator-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Elevator Room</h6>
+<ol>
+<li><strong>MOVE</strong> over to the <strong>BLOODSTAINS</strong> to start a dialog</li>
+<li><strong>CLICK</strong> the <strong>BLOOD AND TISSUE</strong> near the <strong>BLOODSTAINS</strong> to obtain <strong>BODY PART</strong></li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="blood-streaked-hallway"><a name="user-content-blood-streaked-hallway" href="#blood-streaked-hallway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Blood Streaked Hallway</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>BLOODSTAINED ENVIRONMENTAL SUITS</strong> with the glowing item to obtain <strong>OXYGEN CYLINDER</strong></li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="surgery-room"><a name="user-content-surgery-room" href="#surgery-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Surgery Room</h6>
+<ol>
+<li><strong>MOVE</strong> near the <strong>SURGICAL POD BED</strong> to start a dialog</li>
+<li><strong>PICK UP</strong> the <strong>EXTRACTED PDT</strong> from the bloody table</li>
+<li><strong>CLICK</strong> the <strong>CRYOPRESERVATION TANK</strong> to obtain <strong>EMPTY STASIS FLUID CONTAINER</strong></li>
+<li><strong>USE</strong> your <strong>LOOSE CABLES</strong> on the <strong>OXYGEN CYLINDER</strong> to obtain <strong>OXYGEN CYLINDER WRAPPED WITH CABLES</strong></li>
+<li><strong>USE</strong> the <strong>OXYGEN CYLINDER WRAPPED WITH CABLES</strong> on the blue <strong>OXYGEN STORAGE TANK</strong></li>
+<li><strong>CLICK</strong> the purple <strong>ANESTHETIC STORAGE</strong> to fill the anesthetic tank</li>
+<li><strong>USE</strong> the <strong>BODY PART</strong> on the bloody <strong>SURGICAL TRAY</strong></li>
+<li><strong>USE</strong> the <strong>EMPTY REVOLVER</strong> on the <strong>SURGICAL TRAY</strong> to obtain <strong>REFINED ORGANIC MATERIAL</strong></li>
+<li><strong>USE</strong> the <strong>REFINED ORGANIC MATERIAL</strong> on the red <strong>ORGANIC RECEPTICAL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Blood Streaked Hallway</strong></li>
+</ol>
+<h6 id="blood-streaked-hallway_1"><a name="user-content-blood-streaked-hallway_1" href="#blood-streaked-hallway_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Blood Streaked Hallway</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>FORCE FIELD</strong> near the <strong>TOP</strong> of the room to look into the broken pod room</li>
+<li><strong>EXIT</strong> into the room you are viewing by clicking right past the <strong>FORCE FIELD</strong></li>
+</ol>
+<h6 id="broken-pod-room"><a name="user-content-broken-pod-room" href="#broken-pod-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Pod Room</h6>
+<ol>
+<li><strong>MOVE</strong> near the middle of the room to start a quick dialog</li>
+<li><strong>EXIT</strong> through the <strong>TORN APART DOOR</strong> at the <strong>TOP</strong> of the room</li>
+</ol>
+<h6 id="broken-pod-storage-room"><a name="user-content-broken-pod-storage-room" href="#broken-pod-storage-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Pod Storage Room</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>STASIS POD CHIP</strong> near the crates</li>
+<li><strong>GO BACK</strong> to the <strong>Broken Pod Room</strong></li>
+</ol>
+<h6 id="broken-pod-room_1"><a name="user-content-broken-pod-room_1" href="#broken-pod-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Broken Pod Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>STASIS POD CHIP</strong> on the <strong>BROKEN STASIS CONTROL TERMINAL</strong><ol>
+<li><img alt="Pod Room Puzzle" src="http://i.imgur.com/T2oy3IV.jpg" /></li>
+</ol>
+</li>
+<li><strong>USE</strong> the <strong>EMPTY STASIS FLUID CONTAINER</strong> on the new puddle of <strong>CRYOPRESERVATION FLUID</strong> to obtain <strong>FULL STASIS FLUID CONTAINER</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Surgery Room</strong></li>
+</ol>
+<h6 id="surgery-room_1"><a name="user-content-surgery-room_1" href="#surgery-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Surgery Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>FULL STASIS FLUID CONTAINER</strong> on the green <strong>CRYOPRESERVATION TANK</strong></li>
+<li><strong>CLICK</strong> on the <strong>SURGICAL POD BED</strong> to push the body off</li>
+<li><strong>CLICK</strong> on the <strong>SURGICAL POD BED</strong> again to start the puzzle<ol>
+<li><strong>CLICK</strong> each red step on the monitor near your face to complete it</li>
+<li><strong>CLICK</strong> on each node on the monitor until one pops off</li>
+<li>repeat this until all nodes are popped off, if you are slow then you have to do it again or remember the order</li>
+<li>after a long cut scene you&rsquo;ll wake up</li>
+</ol>
+</li>
+<li><strong>GO BACK</strong> to the <strong>Medical Elevator Room</strong></li>
+</ol>
+<h6 id="medical-elevator-room_1"><a name="user-content-medical-elevator-room_1" href="#medical-elevator-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Elevator Room</h6>
+<ol>
+<li><strong>EXIT</strong> using the <strong>ELEVATOR</strong> in the <strong>MIDDLE</strong> of the room </li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-9-botany-lab">-&gt; Chapter 9: The Botany Lab</a></sup></sub></p>
+<hr />
+<h4 id="chapter-9-botany-lab"><a name="user-content-chapter-9-botany-lab" href="#chapter-9-botany-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 9: BOTANY LAB</h4>
+<h6 id="botany-elevator-room"><a name="user-content-botany-elevator-room" href="#botany-elevator-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Elevator Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP RIGHT</strong></li>
+</ol>
+<h6 id="queen-room"><a name="user-content-queen-room" href="#queen-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Queen Room</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>COMPUTER TERMINAL</strong><ol>
+<li>-&gt; [HYDROPONICS - QUEEN CHAMBER]</li>
+<li>-&gt; ACTIVATE SUCTION PUMPS</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the <strong>MILK COLLECTION PAD</strong> to obtain <strong>QUEENS MILK</strong></li>
+<li>wait for the red smily face to appear over the <strong>QUEEN INSECT</strong> and then <strong>CLICK</strong> on the <strong>QUEEN INSECT</strong> to rip off her <strong>QUEEN PINCER</strong></li>
+<li><strong>USE</strong> the <strong>QUEEN PINCER</strong> on the <strong>HARDENED AMBER</strong> to the left of the <strong>COMPUTER TERMINAL</strong> to create <strong>PIERCED AMBER</strong></li>
+<li><strong>CLICK</strong> the <strong>PIERCED AMBER</strong> to obtain <strong>TREE SAP</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Botany Elevator Room</strong></li>
+</ol>
+<h6 id="botany-elevator-room_1"><a name="user-content-botany-elevator-room_1" href="#botany-elevator-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Elevator Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>LEFT</strong></li>
+</ol>
+<h6 id="botany-lab"><a name="user-content-botany-lab" href="#botany-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Lab</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>METAL PLAQUE</strong> to the <strong>LEFT</strong> of the <strong>COMPUTER TERMINAL</strong> near the <strong>MIDDLE</strong> of the room by the flickering screen</li>
+<li><strong>USE</strong> the <strong>TREE SAP</strong> on the <strong>METAL PLAQUE</strong> to obtain <strong>METAL PLAQUE WITH SAP</strong></li>
+<li><strong>USE</strong> the <strong>METAL PLAQUE WITH SAP</strong> on the <strong>CRACKED GLASS</strong> of the broken pod</li>
+<li><strong>USE</strong> the <strong>QUEENS MILK</strong> on the <strong>VAPORIZER PAD</strong> in front of the now fixed pod</li>
+<li><strong>CLICK</strong> the <strong>COMPUTER TERMINAL</strong> to the <strong>LEFT</strong> of the pod you just fixed<ol>
+<li>-&gt; ACTIVATE VAPORIZER</li>
+</ol>
+</li>
+<li>this gives you <strong>VAPORIZED QUEEN PHEROMONE</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Botany Elevator Room</strong></li>
+</ol>
+<h6 id="botany-elevator-room_2"><a name="user-content-botany-elevator-room_2" href="#botany-elevator-room_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Elevator Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="overgrown-oxygen-room"><a name="user-content-overgrown-oxygen-room" href="#overgrown-oxygen-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overgrown Oxygen Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>VAPORIZED QUEEN PHEROMONE</strong> on the <strong>FAST SPINNING FAN</strong> to disperse the insects</li>
+<li><strong>CLICK</strong> each of 3 <strong>OXYGEN COLLECTION TANK</strong> in the room</li>
+</ol>
+<h6 id="overgrown-pool"><a name="user-content-overgrown-pool" href="#overgrown-pool" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Overgrown Pool</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>BODY ENGULFED IN VINES</strong> to obtain <strong>EMERGENCY FLARE</strong></li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="elanores-room"><a name="user-content-elanores-room" href="#elanores-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Elanore&rsquo;s Room</h6>
+<ol>
+<li><strong>CLICK</strong> on <strong>ELANORE WAY</strong> to activate a dialog</li>
+<li><strong>USE</strong> the <strong>EMERGENCY FLARE</strong> on <strong>ELANORE WAY</strong></li>
+<li>after this scene you will automatically run to the <strong>Botany Lab</strong></li>
+</ol>
+<h6 id="botany-lab_1"><a name="user-content-botany-lab_1" href="#botany-lab_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Lab</h6>
+<ol>
+<li><strong>GO BACK</strong> to the <strong>Botany Elevator Room</strong></li>
+</ol>
+<h6 id="botany-elevator-room_3"><a name="user-content-botany-elevator-room_3" href="#botany-elevator-room_3" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Botany Elevator Room</h6>
+<ol>
+<li><strong>EXIT</strong> using the <strong>ELEVATOR</strong></li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-10-power-lab">-&gt; Chapter 10: The Power Lab</a></sup></sub></p>
+<hr />
+<h4 id="chapter-10-power-lab"><a name="user-content-chapter-10-power-lab" href="#chapter-10-power-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 10: POWER LAB</h4>
+<h6 id="power-room-elevator"><a name="user-content-power-room-elevator" href="#power-room-elevator" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Power Room Elevator</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>TOOLBOX</strong> near the <strong>ELEVATOR</strong> to obtain <strong>HIGH TEMPERATURE SLUG GUN</strong></li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="power-hallway-hub"><a name="user-content-power-hallway-hub" href="#power-hallway-hub" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Power Hallway Hub</h6>
+<ol>
+<li>avoid the robot in this hallway</li>
+<li><strong>EXIT</strong> on the <strong>TOP LEFT</strong> into the <strong>BIRTHING LABORATORY</strong></li>
+</ol>
+<h6 id="birthing-laboratory"><a name="user-content-birthing-laboratory" href="#birthing-laboratory" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Birthing Laboratory</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>PORTABLE DEFRIBRILLATOR</strong> on the <strong>RIGHT</strong> side of the room</li>
+<li><strong>CLICK</strong> on the <strong>BOTTOM LEFT</strong> <strong>PREGNANT WOMAN</strong> to get <strong>BANDAGE</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Power Hallway Hub</strong></li>
+</ol>
+<h6 id="power-hallway-hub_1"><a name="user-content-power-hallway-hub_1" href="#power-hallway-hub_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Power Hallway Hub</h6>
+<ol>
+<li>avoid the robot in this hallway</li>
+<li><strong>EXIT</strong> on the <strong>RIGHT</strong> into the <strong>MUTAGEN LABORATORY</strong></li>
+</ol>
+<h6 id="mutagen-laboratory"><a name="user-content-mutagen-laboratory" href="#mutagen-laboratory" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mutagen Laboratory</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>LIQUID NITROGEN CANISTER</strong> near the <strong>BOTTOM</strong> of the screen</li>
+<li><strong>GO BACK</strong> to the <strong>Power Hallway Hub</strong></li>
+</ol>
+<h6 id="power-hallway-hub_2"><a name="user-content-power-hallway-hub_2" href="#power-hallway-hub_2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Power Hallway Hub</h6>
+<ol>
+<li><strong>USE</strong> the <strong>BANDAGE</strong> on the nearby <strong>SINK</strong> to clog it</li>
+<li><strong>USE</strong> the <strong>SINK</strong> again to flood the floor</li>
+<li>wait for the robot to get on the water then <strong>USE</strong> the <strong>PORTABLE DEFRIBRILLATOR</strong> on the <strong>SPILLED WATER</strong></li>
+<li><strong>CLICK</strong> the <strong>DEACTIVATED SENTRY ROBOT</strong> to obtain <strong>TWISTED METAL</strong></li>
+<li><strong>CLICK</strong> the <strong>PLATFORM</strong> near the <strong>BOTTOM LEFT</strong> to go up to the walkway</li>
+<li><strong>USE</strong> the <strong>LIQUID NITROGEN CANISTER</strong> on the red <strong>AIRLOCK</strong></li>
+<li><strong>USE</strong> the <strong>HIGH TEMPERATURE SLUG GUN</strong> on the <strong>AIRLOCK</strong> to blast it open</li>
+<li><strong>EXIT</strong> through the newly opened hole in the walkway</li>
+</ol>
+<h6 id="hybrid-experiment-room"><a name="user-content-hybrid-experiment-room" href="#hybrid-experiment-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hybrid Experiment Room</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>BONE MENDING GLUE</strong> on the left side of the room by the 2nd hybrid from the <strong>BOTTOM LEFT</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Power Room Elevator</strong></li>
+</ol>
+<h6 id="power-room-elevator_1"><a name="user-content-power-room-elevator_1" href="#power-room-elevator_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Power Room Elevator</h6>
+<ol>
+<li><strong>USE</strong> the <strong>BONE MENDING GLUE</strong> on the <strong>CLOSED POWER CELL HOUSING</strong> on the <strong>LEFT</strong> side of the room to create <strong>POWER CELL HOUSING LOCK IMPRINT</strong></li>
+<li><strong>USE</strong> the <strong>TWISTED METAL</strong> on the <strong>POWER CELL HOUSING LOCK IMPRINT</strong> to create <strong>POWER CELL HOUSING KEY</strong></li>
+<li><strong>USE</strong> the <strong>POWER CELL HOUSING KEY</strong> on the <strong>CLOSED POWER CELL HOUSING</strong> to open it</li>
+<li><strong>CLICK</strong> the <strong>OPEN POWER CELL HOUSING</strong> to obtain <strong>POWER CELL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Mutagen Laboratory</strong></li>
+</ol>
+<h6 id="mutagen-laboratory_1"><a name="user-content-mutagen-laboratory_1" href="#mutagen-laboratory_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Mutagen Laboratory</h6>
+<ol>
+<li><strong>USE</strong> the <strong>POWER CELL HOUSING KEY</strong> on the <strong>CLOSED POWER CELL HOUSING</strong> to open it</li>
+<li><strong>CLICK</strong> the <strong>OPEN POWER CELL HOUSING</strong> to obtain <strong>POWER CELL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Birthing Laboratory</strong></li>
+</ol>
+<h6 id="birthing-laboratory_1"><a name="user-content-birthing-laboratory_1" href="#birthing-laboratory_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Birthing Laboratory</h6>
+<ol>
+<li><strong>USE</strong> the <strong>POWER CELL HOUSING KEY</strong> on the <strong>CLOSED POWER CELL HOUSING</strong> to open it</li>
+<li><strong>CLICK</strong> the <strong>OPEN POWER CELL HOUSING</strong> to obtain <strong>POWER CELL</strong></li>
+<li><strong>GO BACK</strong> to the <strong>Hybrid Experiment Room</strong></li>
+</ol>
+<h6 id="hybrid-experiment-room_1"><a name="user-content-hybrid-experiment-room_1" href="#hybrid-experiment-room_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hybrid Experiment Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="malans-experiment-room"><a name="user-content-malans-experiment-room" href="#malans-experiment-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Malan&rsquo;s Experiment Room</h6>
+<ol>
+<li><strong>USE</strong> each <strong>POWER CELL</strong> on each <strong>OPEN POWER CELL HOUSING</strong> to fill the slots</li>
+<li><strong>CLICK</strong> the <strong>SURGICAL LASER</strong> multiple times until you destroy the glass to the <strong>BOTTOM RIGHT</strong></li>
+<li><strong>EXIT</strong> through the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="medical-hallway"><a name="user-content-medical-hallway" href="#medical-hallway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Medical Hallway</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="decontamination-walkway"><a name="user-content-decontamination-walkway" href="#decontamination-walkway" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Decontamination Walkway</h6>
+<ol>
+<li>walk up to the locked door near the <strong>TOP MIDDLE</strong> of the walkway</li>
+<li>look in the <strong>PORTAL</strong> to start a short dialog</li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="hybrid-cage-room"><a name="user-content-hybrid-cage-room" href="#hybrid-cage-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Hybrid Cage Room</h6>
+<ol>
+<li>walk around this room until you hear a loud noise</li>
+<li><strong>GO BACK</strong> to the <strong>Decontamination Walkway</strong></li>
+</ol>
+<h6 id="decontamination-walkway_1"><a name="user-content-decontamination-walkway_1" href="#decontamination-walkway_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Decontamination Walkway</h6>
+<ol>
+<li>Malan will stop you and take you away</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-11-malans-private-lab">-&gt; Chapter 11: Malan&rsquo;s Private Lab</a></sup></sub></p>
+<hr />
+<h4 id="chapter-11-malans-private-lab"><a name="user-content-chapter-11-malans-private-lab" href="#chapter-11-malans-private-lab" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 11: MALAN&rsquo;S PRIVATE LAB</h4>
+<h6 id="observation-room"><a name="user-content-observation-room" href="#observation-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Observation Room</h6>
+<ol>
+<li><strong>CLICK</strong> on <strong>REBECCA MARACHECK</strong> (glass window) until it starts to break and a cutscene plays</li>
+<li><strong>CLICK</strong> on <strong>BLOODSTAINED GLASS</strong> multiple times until it breaks all the way</li>
+<li><strong>PICK UP</strong> the <strong>TEDDY BEAR</strong></li>
+<li><strong>MOVE</strong> over to the lab equipment and pick up <strong>JOHN&rsquo;S PDT</strong></li>
+<li><strong>USE</strong> the <strong>TEDDY BEAR</strong> on the <strong>DNA SCANNER</strong> to open the <strong>RECYCLING DRAIN</strong></li>
+<li><strong>EXIT</strong> through the now opened <strong>RECYCLING DRAIN</strong></li>
+</ol>
+<h6 id="recycling-drain"><a name="user-content-recycling-drain" href="#recycling-drain" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Recycling Drain</h6>
+<ol>
+<li><strong>CLICK</strong> on the <strong>GLOVE</strong> by the <strong>DEAD BODY IN HAZMAT SUIT</strong> to obtain <strong>HAZMAT GLOVE</strong></li>
+<li><strong>USE</strong> the <strong>HAZMAT GLOVE</strong> on the flowing stream of <strong>ACID</strong> by the <strong>RIGHT</strong> side to obtain <strong>HAZMAT GLOVE FILLED WITH ACID</strong></li>
+<li><strong>USE</strong> the <strong>HAZMAT GLOVE FILLED WITH ACID</strong> on the first <strong>METAL GRATING</strong></li>
+<li><strong>CLICK</strong> on the <strong>METAL GRATING</strong> again to escape</li>
+</ol>
+<h6 id="ventillation-shaft"><a name="user-content-ventillation-shaft" href="#ventillation-shaft" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Ventillation Shaft</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP</strong> of the screen</li>
+</ol>
+<h6 id="bloody-body-room"><a name="user-content-bloody-body-room" href="#bloody-body-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bloody Body Room</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>PROSTHETIC ARM</strong> near the <strong>TOP</strong> of the room</li>
+<li><strong>USE</strong> the <strong>MELTED HAZMAT GLOVE</strong> on the <strong>PROSTHETIC ARM</strong> to obtain <strong>PROSTHETIC LIMB WRAPPED IN RUBBER</strong></li>
+<li><strong>USE</strong> the <strong>PROSTHETIC LIMB WRAPPED IN RUBBER</strong> on the <strong>POWER DISTRIBUTION BOX</strong> near the <strong>BOTTOM LEFT</strong> of the room to break the door</li>
+<li><strong>WALK</strong> near the middle blood splatter and a <strong>FALLEN HYBRID</strong> will land on the ground</li>
+<li><strong>CLICK</strong> the <strong>FALLEN HYBRID</strong> to obtain <strong>HYBRID INTESTINES</strong></li>
+<li><strong>USE</strong> the <strong>HYBRID INTESTINES</strong> on the <strong>COGS</strong> by the door to keep it propped open</li>
+<li><strong>EXIT</strong> through the now opened door</li>
+</ol>
+<h6 id="janitorial-office"><a name="user-content-janitorial-office" href="#janitorial-office" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Janitorial Office</h6>
+<ol>
+<li><strong>CLICK</strong> the <strong>TERMINAL</strong><ol>
+<li>[MAINTENANCE BAY POD CONTROL]</li>
+<li>-&gt; MAINTENANCE BAY POD OPEN</li>
+</ol>
+</li>
+<li><strong>CLICK</strong> the <strong>MAINTENANCE POD</strong> to get in</li>
+<li><strong>PRESS</strong> the <strong>DISPOSAL AREA</strong> button to travel there</li>
+</ol>
+<h6 id="disposal-area-drop"><a name="user-content-disposal-area-drop" href="#disposal-area-drop" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Disposal Area Drop</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP LEFT</strong></li>
+</ol>
+<h6 id="disposal-area-hive"><a name="user-content-disposal-area-hive" href="#disposal-area-hive" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Disposal Area Hive</h6>
+<ol>
+<li><strong>PICK UP</strong> the <strong>PLASMA CUTTER</strong> thats attached to the <strong>LOADER INSIDE GROWTH</strong> </li>
+<li><strong>CLICK</strong> the newly revealed <strong>LOADER DISTRIBUTION BOX</strong> that was behind the <strong>PLASMA CUTTER</strong><ol>
+<li><strong>CLICK</strong> the middle <strong>POWER CELL</strong> to take it out</li>
+</ol>
+</li>
+<li><strong>GO BACK</strong> to the <strong>Janitorial Office</strong></li>
+</ol>
+<h6 id="janitorial-office_1"><a name="user-content-janitorial-office_1" href="#janitorial-office_1" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Janitorial Office</h6>
+<ol>
+<li><strong>USE</strong> the <strong>PLASMA CUTTER</strong> on the <strong>REFRIGERATOR</strong></li>
+<li><strong>CLICK</strong> the <strong>FROZEN BODY</strong> that fell out to obtain <strong>EYEBALL</strong></li>
+<li><strong>CLICK</strong> the <strong>MAINTENANCE POD</strong> to get in</li>
+<li><strong>PRESS</strong> the <strong>VISITOR&rsquo;S CENTER EXPANSION</strong> button to travel there</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p>
+<p><sub><sup><a href="#chapter-12-visitors-center">-&gt; Chapter 12: Visitor&rsquo;s Center</a></sup></sub></p>
+<hr />
+<h4 id="chapter-12-visitors-center"><a name="user-content-chapter-12-visitors-center" href="#chapter-12-visitors-center" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>CHAPTER 12: VISITOR&rsquo;S CENTER</h4>
+<h6 id="visitor-center-maintenance-room"><a name="user-content-visitor-center-maintenance-room" href="#visitor-center-maintenance-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visitor Center Maintenance Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>EYEBALL</strong> on the <strong>LOOSE PANEL</strong> on the <strong>POWERED DOWN LOADER</strong></li>
+<li><strong>USE</strong> the <strong>POWER CELL</strong> on the <strong>LOOSE PANEL</strong> to power it on</li>
+<li><strong>CLICK</strong> the <strong>POWERED UP LOADER</strong> to bash into the next room</li>
+</ol>
+<h6 id="visitor-center-crash-room"><a name="user-content-visitor-center-crash-room" href="#visitor-center-crash-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visitor Center Crash Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP LEFT</strong></li>
+</ol>
+<h6 id="visitor-center-statue-room"><a name="user-content-visitor-center-statue-room" href="#visitor-center-statue-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visitor Center Statue Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>BOTTOM LEFT</strong></li>
+</ol>
+<h6 id="visitor-center-lifeboat-room"><a name="user-content-visitor-center-lifeboat-room" href="#visitor-center-lifeboat-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visitor Center Lifeboat Room</h6>
+<ol>
+<li><strong>EXIT</strong> to the <strong>TOP LEFT</strong></li>
+</ol>
+<h6 id="visitor-center-lifeboat-room-2"><a name="user-content-visitor-center-lifeboat-room-2" href="#visitor-center-lifeboat-room-2" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Visitor Center Lifeboat Room #2</h6>
+<ol>
+<li><strong>EXIT</strong> near the <strong>TOP</strong> through the bright doorway</li>
+</ol>
+<h6 id="bloody-window-room"><a name="user-content-bloody-window-room" href="#bloody-window-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Bloody Window Room</h6>
+<ol>
+<li><strong>CLICK</strong> on the <strong>AIRLOCK</strong> to open it</li>
+<li><strong>EXIT</strong> to the <strong>BOTTOM RIGHT</strong></li>
+</ol>
+<h6 id="malans-room"><a name="user-content-malans-room" href="#malans-room" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Malan&rsquo;s Room</h6>
+<ol>
+<li><strong>USE</strong> the <strong>PLASMA CUTTER</strong> on the <strong>MACHINE PARTS</strong> by your platform to stop Malan</li>
+<li><strong>CLICK</strong> the sparkling <strong>QUANTUM STORAGE DEVICE</strong> to pick up <strong>JOHNS PERSONAL DATA TAG</strong></li>
+<li><strong>USE</strong> <strong>JOHNS PERSONAL DATA TAG</strong> on <strong>TEAH HENSLEY</strong> to blast the bitch like she deserves</li>
+<li><strong>CLICK</strong> on <strong>ELLEN MARACHECK</strong> to send her off</li>
+<li>GGWP</li>
+</ol>
+<p><sub><sup><a href="#index">&lt;- Back to Index</a></sup></sub></p></article></body></html>
