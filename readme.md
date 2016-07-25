@@ -3,6 +3,7 @@ Without a family, man, alone in the world, trembles with the cold.
 
 ##### What is this?
 * This is a step-by-step walkthrough for the game STASIS.
+* For the HTML version, check [here](http://mudzereli.github.io/StasisGameWalkthrough/)
 
 -------------------------------------------------------------------------------
 
